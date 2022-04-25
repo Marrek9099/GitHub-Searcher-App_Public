@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+.container {
+    min-width: 90vw;
+    min-height: 90vh;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.filterPanel {
+    padding: 20px;
+}
+
+.filterPanel p {
+    color: grey;
+}
+
+.alignedPosition {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    align-self: flex-start;
+    transition: all 2s;
+    z-index: 1;
+}
+
+.filterPanelHeader {
+    display: flex;
+    align-items: center;
+}
+
+.fa-github {
+    font-size: 2.5rem;
+    padding: 10px 10px 10px 0;
+}
+
+.filterPanelFields * {
+    border: 1px solid rgb(207, 206, 206);
+    padding: 15px;
+    color: grey;
+    box-sizing: border-box;
+}
+
+.filterPanelFields input {
+    width: 300px;
+    margin-right: 20px;
+    
+}
+
+.filterPanelFields input:focus {
+    outline: none;
+    border: 1px solid black;
+}
+
+.searchResults {
+    margin-top: 150px;
+    width: 100%;
+}
+
+.searchResults>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 13px;
+}
+
+.searchNotice {
+    margin: 20px;
+    padding: 10px;
+    background: black;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    border: 10px;
+    width: 90%;
+}
+
+.dataItem {
+    width: 32%;
+    height: 200px;
+    background-color: white;
+    margin: 5px;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 10px;
+    
+}
+
+.dataItem img {
+    border-radius: 10px 0 0 10px;
+}
+
+.dataItem a {
+    color: white;
+    background: black;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.dataItem a:hover {
+    filter: invert(0.75);
+}
+
+.userDetails, .repositoryDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+
+@media screen and (max-width: 1100px) {
+    .dataItem {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .userDetails * {
+        margin: 10px 0;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .dataItem {
+        width: 48%; 
+    }
+}
